@@ -17,7 +17,7 @@ test('delay', async () => {
 // test('error400', async () => {
 //  const res = await api.get('/error400').send()
 //  expect(res.statusCode).toEqual(200)
-// })
+//})
 
 afterAll((done) => {
   server.close()
