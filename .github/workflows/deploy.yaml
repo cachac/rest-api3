@@ -31,8 +31,7 @@ jobs:
             APP_ENV=${{ secrets.APP_ENV }}
 
   test:
-    name: Run tests
-    needs: build
+    name: Run tests    
     runs-on: ubuntu-latest
     steps:
       - name: code
