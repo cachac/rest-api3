@@ -10,15 +10,15 @@ function calculateAge(yearOfBirth) {
   return currentYear - yearOfBirth;
 }
 
-function unsafeFunction(userInput) {
+function safeFunction(userInput) {
   // Issue: eval() introduce problemas de seguridad.
   return userInput;
 }
 
 console.log(getUserName());
 console.log(calculateAge(1990));
-console.log(unsafeFunction("2 + 2")); // Potencial problema de seguridad
+console.log(safeFunction("2 + 2")); // Potencial problema de seguridad
 
 export default {
-  unsafeFunction,
+  safeFunction,
 };
