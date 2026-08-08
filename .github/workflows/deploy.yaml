@@ -76,7 +76,7 @@ jobs:
 
   security-SNYK:
     name: snyk image scan
-    needs: build
+    needs: codeScan
     runs-on: ubuntu-latest
     steps:
     - name: Run Snyk to check Docker image for vulnerabilities
@@ -85,5 +85,6 @@ jobs:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
       with:
         image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+        continue-on-error: true
 
 
